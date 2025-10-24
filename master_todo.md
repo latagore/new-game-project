@@ -10,7 +10,9 @@ This project is a top-down action RPG with a unique spell-casting system based o
 
 ### 1. Projectile and Laser System
 **Status:** Planning  
-**Document:** [projectile_laser_system.md](./projectile_laser_system.md)  
+**Documents:** 
+- [projectile_laser_system.md](./projectile_laser_system.md) - Technical implementation
+- [spell_architecture_responsibilities.md](./spell_architecture_responsibilities.md) - Code organization & responsibilities
 **Priority:** High
 
 Implements a comprehensive projectile and hitscan laser system for magic spells, expanding the spell system beyond instant-effect abilities.
@@ -21,6 +23,8 @@ Implements a comprehensive projectile and hitscan laser system for magic spells,
 - Collision detection with hitboxes
 - Extensible architecture for future spell types
 - Visual rendering considerations
+- Clear responsibility model for scaling to 100+ spells
+- Data-driven spell system using Godot resources
 
 ### 2. [Future Feature Placeholder]
 **Status:** Not Started  
