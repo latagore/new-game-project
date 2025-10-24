@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqv2jyle6s7j1"]
+
+[ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_vwxyz"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_lmnop"]
+[ext_resource type="PackedScene" uid="uid://b3vj1vj1vj1v1" path="res://scenes/components/hurtbox.tscn" id="3_abcde"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_67890"]
+radius = 27.0
+height = 68.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_vwxyz")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.2, 0.2, 1)
+texture = ExtResource("2_lmnop")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_67890")
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_abcde")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_67890")
+
+[connection signal="hurt" from="Hurtbox" to="." method="take_damage"]

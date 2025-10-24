@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://attack_effect_001"]
+
+[ext_resource type="Script" path="res://scenes/effects/attack_effect.gd" id="1_attack"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_icon"]
+
+[node name="AttackEffect" type="Node2D"]
+script = ExtResource("1_attack")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.4, 0.8)
+position = Vector2(40, 0)
+rotation = 0.785398
+scale = Vector2(0.3, 0.8)
+texture = ExtResource("2_icon")
+
