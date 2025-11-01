@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/experiments/physics_performance_test.gd" id="1_phys_perf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_walls"]
+bounce = 0.8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_top"]
+size = Vector2(1152, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bottom"]
+size = Vector2(1152, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_left"]
+size = Vector2(20, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_right"]
+size = Vector2(20, 648)
+
+[node name="PhysicsPerformanceTest" type="Node2D"]
+script = ExtResource("1_phys_perf")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="TopWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(576, 10)
+physics_material_override = SubResource("PhysicsMaterial_walls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall"]
+shape = SubResource("RectangleShape2D_top")
+
+[node name="BottomWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(576, 638)
+physics_material_override = SubResource("PhysicsMaterial_walls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall"]
+shape = SubResource("RectangleShape2D_bottom")
+
+[node name="LeftWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(10, 324)
+physics_material_override = SubResource("PhysicsMaterial_walls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall"]
+shape = SubResource("RectangleShape2D_left")
+
+[node name="RightWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(1142, 324)
+physics_material_override = SubResource("PhysicsMaterial_walls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall"]
+shape = SubResource("RectangleShape2D_right")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FPSBackground" type="ColorRect" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 385.0
+offset_bottom = 110.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="FPSLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 380.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "FPS: 60
+RigidBody2D: 0"
+
+[node name="ControlBackground" type="ColorRect" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 120.0
+offset_right = 905.0
+offset_bottom = 205.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="ControlLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 125.0
+offset_right = 900.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 21
+text = "Controls"
+
+[node name="StatsBackground" type="ColorRect" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 215.0
+offset_right = 500.0
+offset_bottom = 430.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 220.0
+offset_right = 495.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 21
+text = "Stats"
+

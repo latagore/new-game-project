@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/experiments/lightning_charge/lightning_charge_experiment.gd" id="1_lightning"]
+[ext_resource type="PackedScene" path="res://scenes/experiments/fireball_charge/test_target.tscn" id="2_target"]
+
+[sub_resource type="Gradient" id="Gradient_charge"]
+colors = PackedColorArray(0.5, 0.8, 1, 1, 0.3, 0.6, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_charge"]
+gradient = SubResource("Gradient_charge")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_reticle"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="LightningChargeExperiment" type="Node2D"]
+script = ExtResource("1_lightning")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -1000.0
+offset_top = -600.0
+offset_right = 1000.0
+offset_bottom = 600.0
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="ChargeIndicator" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("GradientTexture2D_charge")
+
+[node name="TargetLine" type="Line2D" parent="."]
+width = 2.0
+default_color = Color(0.5, 0.8, 1, 0.3)
+
+[node name="TargetingReticle" type="Node2D" parent="."]
+
+[node name="OuterRing" type="Line2D" parent="TargetingReticle"]
+points = PackedVector2Array(-20, 0, -10, 0, 20, 0, 10, 0, 0, -20, 0, -10, 0, 20, 0, 10)
+width = 2.0
+default_color = Color(0.5, 0.8, 1, 0.8)
+
+[node name="InnerDot" type="Polygon2D" parent="TargetingReticle"]
+polygon = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
+color = Color(0.5, 0.8, 1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FlashOverlay" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.5, 0.8, 1, 0)
+
+[node name="ChargeLabel" type="Label" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 400.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 20
+text = "Click and hold to charge lightning"
+
+[node name="Instructions" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -120.0
+offset_right = 300.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "LIGHTNING CHARGE EXPERIMENT
+
+Aim with mouse to target enemies
+Hold mouse button to charge
+Release to strike instantly
+Max charge: 3 seconds"
+horizontal_alignment = 1
+
+[node name="Targets" type="Node2D" parent="."]
+
+[node name="TestTarget1" parent="Targets" instance=ExtResource("2_target")]
+position = Vector2(400, -100)
+
+[node name="TestTarget2" parent="Targets" instance=ExtResource("2_target")]
+position = Vector2(400, 100)
+
+[node name="TestTarget3" parent="Targets" instance=ExtResource("2_target")]
+position = Vector2(600, 0)
+
+[node name="TestTarget4" parent="Targets" instance=ExtResource("2_target")]
+position = Vector2(800, -150)
+
+[node name="TestTarget5" parent="Targets" instance=ExtResource("2_target")]
+position = Vector2(800, 150)
+

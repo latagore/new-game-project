@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/experiments/performance_tests/performance_test.gd" id="1_perf"]
+
+[node name="PerformanceTest" type="Node2D"]
+script = ExtResource("1_perf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FPSBackground" type="ColorRect" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 385.0
+offset_bottom = 110.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="FPSLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 380.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "FPS: 60
+Objects: 0"
+
+[node name="ControlBackground" type="ColorRect" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 120.0
+offset_right = 905.0
+offset_bottom = 205.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="ControlLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 125.0
+offset_right = 900.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 21
+text = "Controls"
+
+[node name="StatsBackground" type="ColorRect" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 215.0
+offset_right = 455.0
+offset_bottom = 380.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 220.0
+offset_right = 450.0
+offset_bottom = 375.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 21
+text = "Stats"
+
