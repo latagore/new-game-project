@@ -85,3 +85,4 @@ func _animate_lightning():
 	await get_tree().create_timer(0.5).timeout
 	queue_free()
 
+

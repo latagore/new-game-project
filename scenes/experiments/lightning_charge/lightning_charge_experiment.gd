@@ -188,3 +188,4 @@ func _perform_raycast_strike(origin: Vector2, target: Vector2, damage: float, in
 	if hit_target and hit_target.has_method("take_damage"):
 		hit_target.take_damage(damage)
 
+
