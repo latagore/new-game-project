@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=3 format=3 uid="uid://spell_fireball_001"]
+
+[ext_resource type="Script" path="res://scripts/spells/spell_data.gd" id="1_spell"]
+[ext_resource type="PackedScene" uid="uid://fireball_spell_001" path="res://scenes/spells/projectiles/fireball.tscn" id="2_scene"]
+
+[resource]
+script = ExtResource("1_spell")
+spell_name = "Fireball"
+transcription = "IGNIS"
+hotkey_index = 0
+behavior_type = "projectile"
+projectile_scene = ExtResource("2_scene")
+base_damage = 15.0
+max_damage = 45.0
+speed = 400.0
+max_speed = 800.0
+max_range = 1500.0
+lifetime = 5.0
+supports_charging = true
+max_charge_time = 3.0

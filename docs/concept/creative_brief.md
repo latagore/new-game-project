@@ -1,18 +1,14 @@
 # Creative Brief: Arcane Dominion
 
-## Game Vision
-**You are a wizard who can grow in power.** The objective is to grow in power, wield massive powers, and change the world with your actions. But the world fights back. You win, you lose, and you must adapt or perish.
+## Raw Game Vision
+You play both as a god as well as a priest of your religion. Your job as a priest is to influence the world for the better or the worse, spreading the domain of your god. You do this by making friends with villages, establishing shrines, connecting with the relics of the world. Your goal later shifts to protecting your allies (of your priest and of your religion, which can be separate) and destroying your enemies. 
 
-## Core Concept
-A strategic magical conquest where you build power in a dangerous world that actively resists your influence. Nations wage war, evils awaken, and your magic creates ripples that demand constant adaptation. Victory requires tactical brilliance, but failure teaches the harsh lessons that forge true power.
+These villages and shrines will provide distinct bonuses to you. You'll feel their benefit as you gain them and hurt once you lose them. You try and capture leylines and harvest the natural resources of the world. You'll need to protect them in times of crisis to keep getting their benefit.
 
-## Core Experience
-- **Power Progression**: Start as a vulnerable apprentice and fight your way to become a feared archmage. Each victory grants power, but defeat strips it away.
-- **World-Altering Magic**: Your spells change the battlefield and beyond - they create chokepoints, summon environmental hazards, and leave lasting scars on the world that enemies can exploit.
-- **Satisfaction Through Scale**: The hard-earned thrill of growing from desperate fireballs to devastating storms, earned through countless battles and strategic gambles.
-- **Strategic Mastery**: Learn to outmaneuver enemies through careful spell timing and cooldown management. Perfect execution wins battles, but poor choices lose wars.
-- **Flow of Engagement**: Balance immediate tactical decisions with long-term strategic planning. A poorly timed spell can doom a battle, while a well-planned one can turn the tide of entire campaigns.
-- **Forged Complexity**: Spellcasting demands skill and adaptation. Master the inputs through practice, or fall to enemies who exploit your mistakes.
+I want to create a game with a living world. World events happen on their own. Bandits may decide to attack. Monsters may decide to attack. Nations motivated by other gods may be encouraged to attack ones that are friendly to you.
+
+We should try and capture the essence of battle brothers combat. We could do Total War style (idling style) or battle brothers style (you have 12 brothers and you try and crush tens of enemies without losing any of them).
+
 
 ## World Design
 The world is a brutal, unforgiving place where your power means nothing without strategy:

@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://lightning_spell_001"]
 
-[ext_resource type="Script" path="res://scenes/experiments/lightning_charge/lightning_bolt.gd" id="1_bolt"]
+[ext_resource type="Script" path="res://scenes/spells/effects/lightning_bolt.gd" id="1_bolt"]
 
 [sub_resource type="Gradient" id="Gradient_flash"]
 colors = PackedColorArray(0.7, 0.9, 1, 1, 0.5, 0.8, 1, 0)
@@ -45,6 +45,3 @@ initial_velocity_max = 300.0
 scale_amount_min = 2.0
 scale_amount_max = 5.0
 color = Color(0.7, 0.9, 1, 1)
-
-
-
