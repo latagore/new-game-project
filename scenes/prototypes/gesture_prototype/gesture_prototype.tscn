@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://gesture_prototype_001"]
+
+[ext_resource type="Script" path="res://scenes/prototypes/gesture_prototype/gesture_prototype.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://c2cwox8a2x8qj" path="res://scenes/player/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://dqv2jyle6s7j1" path="res://scenes/enemies/enemy.tscn" id="3_enemy"]
+[ext_resource type="Script" path="res://scripts/input/gesture_recognizer.gd" id="4_gesture"]
+
+[node name="GesturePrototype" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.15, 0.15, 0.2, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(576, 324)
+
+[node name="GestureRecognizer" type="Node" parent="."]
+script = ExtResource("4_gesture")
+
+[node name="DrawLine" type="Line2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SpellLabel" type="Label" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 400.0
+offset_bottom = 50.0
+text = "Right-click drag to draw gestures"
+
+[node name="GestureDisplay" type="Control" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HelpLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -80.0
+offset_right = 200.0
+offset_bottom = -20.0
+horizontal_alignment = 1
+text = "Gestures: Line (missile), Circle (shield), V (fire arrow), Triangle (fireball)
+WASD to move, Right-click drag to draw"
+
+[node name="Enemy1" parent="." instance=ExtResource("3_enemy")]
+position = Vector2(200, 200)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_enemy")]
+position = Vector2(900, 200)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_enemy")]
+position = Vector2(200, 500)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_enemy")]
+position = Vector2(900, 500)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_enemy")]
+position = Vector2(550, 150)
