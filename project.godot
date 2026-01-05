@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-run/main_scene="res://scenes/prototypes/combat_prototype/combat_prototype.tscn"
+run/main_scene="res://scenes/prototypes/typing_prototype/typing_prototype.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 config/main_scene="res://scenes/world.tscn"
